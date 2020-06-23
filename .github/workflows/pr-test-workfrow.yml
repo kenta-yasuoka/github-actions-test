@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Geidai Running Test ON PR
+name: PHPStan running action.
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
@@ -42,6 +42,6 @@ jobs:
       run : composer require phpstan/phpstan
     
     - name: running phpstan
-      run: vendor/bin/phpstan -c phpstan.neon
+      run: php vendor/bin/phpstan analyze -c phpstan.neon
         
 
